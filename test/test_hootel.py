@@ -14,6 +14,8 @@ class TestHootel(object):
         options.add_argument('--headless')
         self.browser = webdriver.Chrome(options=options)
         self.browser.get(URL)
+        self.browser.maximize_window()
+        # self.browser.set_window_size(1100, 600, 'current')
 
     def teardown_method(self):
         self.browser.quit()
